@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Te Amo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playfair+Display:wght@400;500;700&family=Bangers&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Filtro que crea la textura de papel arrugado -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="crumple" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+        <feTurbulence id="turb" type="fractalNoise" baseFrequency="0.038" numOctaves="3" seed="7" result="n"/>
+        <feDiffuseLighting in="n" id="light" surfaceScale="12" diffuseConstant="1.15" lighting-color="#fbf6ea">
+          <feDistantLight azimuth="225" elevation="55"/>
+        </feDiffuseLighting>
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="wiggle idle" id="stage">
+    <div class="shadow">
+      <div class="paper" id="paper" role="button" tabindex="0" aria-label="Toca el papel arrugado">
+        <div class="tex"></div>
+        <div class="content">
+          <svg viewBox="0 0 560 300" role="img" aria-label="Te Amo escrito a mano" id="art">
+            <text class="word" x="50%" y="165" text-anchor="middle">Te Amo</text>
+            <path class="doodle underline" d="M90 200 C 190 218, 330 188, 470 208"/>
+            <path class="doodle heart" d="M280 270 C 240 240, 235 215, 262 215 C 274 215, 280 224, 280 228 C 280 224, 286 215, 298 215 C 325 215, 320 240, 280 270 Z"/>
+          </svg>
+        </div>
+        <div class="tex2"></div>
+        <div class="shade"></div>
+      </div>
+    </div>
+  </div>
+  <p class="hint" id="hint">tócalo ✋</p>
+
+  <!-- Pantalla negra: aparece con el segundo toque -->
+  <div class="blackout" id="blackout"></div>
+
+  <!-- Rueda de colores (tonos Orchid Pink) que aparece con el BOOM -->
+  <div class="rueda" id="rueda"></div>
+
+  <!-- Mensaje dramático que aparece sobre la pantalla negra -->
+  <div class="message" id="message" aria-live="polite"></div>
+
+  <!-- El BOOM y los 3 cuadros -->
+  <div class="boom" id="boom"></div>
+  <div class="cuadros" id="cuadros"></div>
+
+  <!-- Ventana que se abre al tocar un cuadro -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-card" id="modalCard" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+      <h2 id="modalTitulo"></h2>
+      <p id="modalTexto"></p>
+      <button type="button" class="cerrar" id="cerrar">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
