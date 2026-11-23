@@ -824,10 +824,10 @@ const GALERIA_TITULO = 'Las razones de cada canción que te he dedicado';
 // Cuando terminan de aparecer todos los cuadros, la pantalla se va a negro (sin tocar nada),
 // salen estos textos, vuelven los cuadros, bajan hasta las últimas tarjetas y se desbloquean.
 const TARJETAS_BLOQUEADAS = 2;    // cuántas tarjetas del final empiezan bloqueadas (0 = sin logro)
-const LOGRO_ESPERA = 3000;        // ms que se quedan los cuadros a la vista antes de que empiece el logro
-const LOGRO_TITULO = 'Acabas de desbloquear un nuevo logro';
-const LOGRO_TEXTO  = 'Dedicarte 2 canciones, que únicamente tenía guardadas para alguien tan especial, que tanto amo y que me ha cambiado muchas cosas de mí.';
-const LOGRO_FINAL  = 'Puedes disfrutar esas 2 canciones, porque ya las agregué a la playlist de canciones que te he dedicado';
+const LOGRO_ESPERA = 1500;        // ms que se quedan los cuadros a la vista antes de que empiece el logro
+const LOGRO_TITULO = 'Acabas de desbloquear un nuevo logro (Baja)';
+const LOGRO_TEXTO  = 'El logro: Has desbloqueado 2 canciones, que únicamente tenía guardadas para alguien tan especial, que tanto amo y que me ha cambiado muchas cosas de mí...';
+const LOGRO_FINAL  = 'Ya puedes escucharlas porque ya las agregué a la playlist de canciones que te he dedicado';
 
 const TARJETAS = [
   { titulo: 'Mi Bello Angel - Natanel Cano', color: '#08244B', texto: 'Yo te dedico esta cancion, porque contigo, he sentido cosas que no habia sentido con alguien mas. Tambien porque tu llegaste sin saberlo, llegaste cuando estaba saliendo de un momento tormentoso de mi vida, tu llegaste a calmar todo y volver a sentir la paz que no pude haber sentido. Tu llegaste a cambiar mis actitudes y mi forma de pensar, tal vez no eran tan malas, pero estaban equivocadas, cambiaste mi forma de amar a una persona y de cuidarla, cambiaste muchas cosas que no podria decirte al 100. Pero unicamente se, que llegaste a mi vida, y la mejoraste.' },
